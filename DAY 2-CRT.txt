@@ -1,0 +1,462 @@
+code = input()
+
+capitals = 0
+smalls = 0
+numbers = 0
+special = 0
+space = 0
+
+for ch in code:
+    if ch.isupper():
+        capitals += 1
+    elif ch.islower():
+        smalls += 1
+    elif ch.isdigit():
+        numbers += 1
+    elif ch == ' ':
+        space += 1
+    else:
+        special += 1
+
+if (code[0].isupper() and capitals >= 2 and smalls >= 2 and
+    numbers >= 1 and special >= 1 and space == 0 and len(code) >= 8):
+    print("Valid Secret Code")
+else:
+    print("Not a Valid Secret Code")
+
+print("Capitals-", capitals)
+print("Small-", smalls)
+print("Numbers-", numbers)
+print("Special-", special)
+print("Space-", space)
+
+
+
+place=input()
+if place == 'campus':
+    place=input()
+    if place == 'block':
+        place=input()
+        if place == 'floor':
+            place=input()
+            if place == 'class':
+                print("Inside the class")
+            else:
+                print("Roaming the coridor")
+        else:
+            print("In the library")
+    else:
+        print("In the canteen")
+else:
+    print("In the theater")
+
+
+
+li=[1,2,3,4,5,6]
+for i in li:
+    li.remove(i)
+print(li)
+
+
+
+TUPLE
+
+t=()
+print(type(t))
+
+
+t=(1,99.9,'happy',[1,3,5,6],None)
+print(t)
+print(dir(t))
+
+
+t=(1,99.9,'happy',[1,3,5,6],None)
+print(t)
+print(t[2])
+print(t[2:])
+
+
+t=(1,99.9,'happy',[1,3,5,6],None)
+print(t)
+print(t[2])
+print(t[2:])
+t1=(1,2,3,4)
+print(t+t1)
+
+
+
+t=(1,99.9,'happy',[1,3,5,6],None)
+print(t)
+print(t[2])
+print(t[2:])
+t1=(1,2,3,4)
+print(t+t1)
+print(t1*3)
+
+
+
+t=(1,99.9,'happy',[1,3,5,6],None)
+print(t)
+print(t[2])
+print(t[2:])
+t1=(1,2,3,4)
+print(t+t1)
+print(t1*3)
+print(t1>=t)
+
+
+
+t=(1,99.9,'happy',[1,3,5,6],None)
+print(t)
+print(t[2])
+print(t[2:])
+t1=(1,2,3,4)
+print(t+t1)
+print(t1*3)
+print(t1>=t)
+print("happy" in t)
+
+
+
+t=(1,99.9,'happy',[1,3,5,6],None)
+print(t)  #all elements
+print(t[2]) #single element
+print(t[2:]) #certain part of tuple
+t1=(1,2,3,4)
+print(t+t1) #concatenation
+print(t1*3) #repitition
+print(t1>=t) #relation
+print("happy" in t) #membership
+print(t1 is not t) #membership
+
+
+built-in functions
+
+name='sruthi'
+print(tuple(name))
+
+
+name='sruthi'
+tuple(name)
+print(name)
+
+
+packing-unpacking
+
+pack='sruthi','nani','venkat','bablu'
+print(pack)
+
+
+pack='sruthi','nani','venkat','bablu'
+print(pack)
+n1,n2,n3,n4=pack
+print(n1,n2,n3,n4,sep="\n")
+
+
+
+Arbitrary variable
+
+*suresh,ramesh,naresh=(1,1,1,1)
+print(suresh,ramesh,naresh,sep='\t')
+
+O/P:[1, 1]	1	1
+
+
+
+suresh,*ramesh,naresh=(1,1,1,1)
+print(suresh,ramesh,naresh,sep='\t')
+
+O/P:1	[1, 1]	1
+
+
+SETS
+
+s=set()
+print(type(s))
+
+
+s=set()
+s1={1}
+s2={1,3,4,5,6,7}
+s3={44,55}
+print(s2<s3)
+
+
+s=set()
+s1={1}
+s2={1,3,4,5,6,7}
+s3={44,55}
+print(s3 is not s2)
+
+
+methods
+
+add()
+s={1,2,3,4}
+s.add(6)
+print(s)
+
+
+update()
+s={1,2,3,4}
+s.add(6)
+s.update({7,8,9})
+print(s)
+
+
+remove()
+s={1,2,3,4}
+s.add(6)
+s.update({7,8,9})
+s.remove(7)
+print(s)
+
+
+clear()
+s={1,2,3,4}
+s.add(6)
+s.update({7,8,9})
+s.remove(7)
+s.discard(99)
+s.clear()
+print(s)
+
+
+
+Mathematical operations on SET
+
+update()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b.union(v))
+b.update(v)
+print(b)
+
+
+
+union():|-mathematical rep
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b.union(v))
+
+
+
+difference()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b.difference(v))
+
+
+
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b - v)
+
+
+
+difference_update()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b - v)
+b.difference_update(v)
+print(b)
+
+
+
+
+intersection()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b.intersection(v))
+print(b&v)
+
+
+
+intersection_update()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+b.intersection_update(v)
+print(b)
+
+
+
+symmetric_difference()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b.symmetric_difference(v))
+print(b^v)
+
+
+
+symmetric_difference_update()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b.symmetric_difference_update(v))
+print(b)
+
+
+
+isdisjoint()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b.isdisjoint(v))
+
+
+
+issubset()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print({4,5}.issubset(b))
+
+
+
+issuperset()
+b={1,2,3,4,5}
+v={4,5,6,7,8}
+print(b.issuperset({4,5}))
+
+
+
+
+DICTIONARIES
+
+d={}
+print(type(d))
+
+
+
+d={}
+movies={1:'Nenokkidiney',2:'Iddaramayiltho',3:'three',4:'Aa naluguru',5:'Pandavulu'}
+digits={'one':1,'two':2,'three':3}
+print(movies)
+print(digits)
+
+
+
+d={}
+movies={1:'Nenokkidiney',2:'Iddaramayiltho',3:'three',4:'Aa naluguru',5:'Pandavulu'}
+print(movies)
+print(movies[2])
+
+
+
+d={}
+movies={1:'Nenokkidiney',2:'Iddaramayiltho',3:'three',4:'Aa naluguru',5:'Pandavulu'}
+digits={'one':1,'two':2,'three':3}
+print('one' in digits) #membership
+
+
+
+d={}
+movies={1:'Nenokkidiney',2:'Iddaramayiltho',3:'three',4:'Aa naluguru',5:'Pandavulu'}
+print(movies.keys()) #access with keys
+print(movies.items()) #items
+print(movies.values()) #access with values
+
+
+
+d={}
+movies={1:'Nenokkidiney',2:'Iddaramayiltho',3:'three',4:'Aa naluguru',5:'Pandavulu'}
+movies.update({6: 'aaru'}) #update
+movies[7]='seventh sense'  #add the new value
+movies[4]='fourteen'  #add the new value to tthe key
+movies.pop(6) #delete particular element
+movies.popitem() #deletes last element in the data
+movies.clear() #deletes entire dictionary
+print(movies)
+
+
+
+d={}
+movies={1:'Nenokkidiney',2:'Iddaramayiltho',3:'three',4:'Aa naluguru',5:'Pandavulu'}
+print(movies.get(5)) #to perform get method
+print(movies.setdefault(5,'Five'))  #to perform setdefault method(if key not present add a new key to the dic)
+print(movies)
+
+
+
+l1=['NTR','NANI','RAM','VIJAY']
+print(dict.fromkeys(l1,100))
+
+
+
+d={}
+movies={1:'Nenokkidiney',2:'Iddaramayiltho',3:'three',4:'Aa naluguru',5:'Pandavulu'}
+print(sorted(movies.items(),reverse=True))
+
+
+
+l1=['HULK','IRON MAN','GOKU']
+l2=['SHE HULK','PEPPER POTS','WONDER WOMAN','WANDA VISION']
+print(dict(zip(l1,l2)))
+
+
+
+Dictionary comprehension
+
+name=['vinod','sriram','jyoshna','veena']
+print({k:k*k for k in range(10,16) if k%2==0})
+print({name : len(name) for name in name})
+print({name:'even_length' if len(name)%2==0 else "odd_length" for name in name if len(name)>5})
+
+
+
+COLLECTIONS
+
+COUNTER
+from collections import Counter
+string = "My name is raju"
+var=Counter(string)
+print(var)
+
+
+from collections import Counter
+import random
+s=[random.randrange(1,8) for i in range(10)]
+var=Counter(s)
+print(var)
+
+
+
+DEFAULT_DICT
+from collections import defaultdict
+d=defaultdict(int)
+d['a']=1
+d['b']=2
+print(d['a'])
+print(d['b'])
+print(d['c'])
+
+
+
+DEQUE
+from collections import deque
+d=deque([1,2,3,4,5])
+d.append(6)
+print(d)
+d.appendleft(1)
+print(d)
+d.pop()
+print(d)
+d.popleft()
+print(d)
+d.extend([1,2,3])
+print(d)
+d.extendleft([-2,-3,0])
+print(d)
+d.remove(5)
+print(d)
+d.reverse()
+print(d)
+d.rotate(-3)
+print(d)
+
+
+
+NAMED TUPLE
+Student=namedtuple('Student',['name','branch','marks'])
+s1=Student('Kiran','CSE','508')
+print(s1.name)
+print(s1.marks)
+print(s1._fields)
+print(s1._asdict())
